@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+void T();
+void A();
+void I();
+
+int main()
+{
+	T();
+	A();
+	I();
+	
+	system ("pause");
+	return 0;
+	
+	}
+void T()
+{
+	cout<<"******\n";
+	cout<<"  **  \n";
+	cout<<"  **  \n";
+	cout<<"  **  \n\n";
+	}
+void A()
+{
+	cout<<"  **  \n";
+	cout<<"**  **\n";
+	cout<<"******\n";
+	cout<<"**  **\n\n";
+	}
+void I()
+{
+	cout<<" **** \n";
+	cout<<"  **  \n";
+	cout<<"  **  \n";
+	cout<<"  **  \n";
+	cout<<" **** \n";
+	}
+
+	
