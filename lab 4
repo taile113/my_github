@@ -1,1 +1,25 @@
-
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n1, n2, kq;
+	char pheptoan, ch;
+	do {
+		cout<<"\nnhap so thu 1 , phep toan, nhap so thu 2 : ";
+		cin>> n1 >> pheptoan >> n2 ;
+		switch(pheptoan)
+		{
+			case'+': kq = n1 + n2; break;
+			case'-': kq = n1 - n2; break;
+			case'*': kq = n1 * n2; break;
+			case'/': kq = n1 / n2; break;
+			default: kq = 0;
+			
+		}
+		cout<<"ketqua = "<<kq;
+		cout<<"\nlua chon khac(chon'y'or'n') ? ";
+		cin>>ch;
+		} while (ch != 'n');
+		return(0);
+	
+}
