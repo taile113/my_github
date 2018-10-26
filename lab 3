@@ -1,1 +1,26 @@
-
+#include<iostream>
+using namespace std;
+struct phone
+{
+	int	mavung;
+	int traodoi;
+	int so;	
+};
+int main()
+{
+	phone a,b;
+	a.mavung= 212;
+	a.traodoi=-767;
+	a.so= -8900;
+	
+	cout<<"nhap ma vung: ";
+	cin>>b.mavung;
+	cout<<"nhap trao doi: ";
+	cin>>b.traodoi;
+	cout<<"nhap so: ";
+	cin>>b.so;
+	cout<<"so dien thoai toi la: "<<"("<<a.mavung<<")"<<a.traodoi<<a.so<<endl<<"so dien thoai ban la: "<<"("<<b.mavung<<")"<<"-"<<b.traodoi<<"-"<<b.so;
+	return(0);
+	
+	
+}
