@@ -1,1 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
 
+int main() 
+{
+int nam = 10;
+double soluong = 3000.0, laisuat = 5.5;
+
+cout<<"Nhap so tien ban dau: ";
+cin>>soluong;
+cout<<"Nhap so nam: ";
+cin>>nam;
+cout<<"Nhap lai suat(%): ";
+cin>>laisuat;
+
+laisuat/=100;
+
+cout<<"vao cuoi"<<nam<<" nam , ban se co "<<soluong * pow((1 + laisuat), nam)<<" dong.";
+
+for (int i = 1; i <= nam; i++) 
+{
+cout<<"khi ket thuc "<<i<<" so nam ban co "<<soluong<<" + ("<<soluong<<" + "<<laisuat<<"), do la ";
+soluong+=soluong*laisuat;
+cout<<soluong<<endl;
+}
+
+cout<<"vao cuoi cung "<<nam<<" nam , ban se co "<<soluong<<" dong.";
+
+
+return 0;
+}
