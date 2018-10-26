@@ -1,1 +1,76 @@
-
+#include<iostream>
+using namespace std;
+void menu(){
+	cout << "---------Menu------------" << endl;
+	cout << "1.Cong" << endl;
+	cout << "2.Tru" << endl;
+	cout << "3.Nhan" << endl;
+	cout << "4.Chia" << endl;
+	cout << "5.Thoat" << endl;
+}
+void phepCong(int a,int b,int c,int d){
+	int tu = a * d + b * c;
+	int mau = b * d;
+	cout << a << "/" << b << "+" << c << "/" << d << "=" << tu << "/" << mau <<endl;
+}
+void phepTru(int a,int b,int c,int d){
+	int tu = a * d - b * c;
+	int mau = b * d;
+	cout << a << "/" << b << "-" << c << "/" << d << "=" << tu << "/" << mau <<endl;
+}
+float phepNhan(int a,int b,int c,int d){
+	int tu = a * c;
+	int mau = b * d;
+	cout << a << "/" << b << "*" << c << "/" << d << "=" << tu << "/" << mau <<endl;
+}
+float phepChia(int a,int b,int c,int d){
+    int tu = a * d;
+	int mau = b * c;
+	cout << a << "/" << b << "/" << c << "/" << d << "=" << tu << "/" << mau <<endl;
+}
+int main(){
+	int a,b,c,d,luaChon;
+	float cong,tru,nhan,chia;
+	cout << "Nhap tu so thu 1:" << endl;
+	cin>> a;
+	cout << "Nhap mau so thu 1:" << endl;
+	cin >> b;
+	cout << "Nhap tu so thu 2:" << endl;
+	cin>> c;
+	cout << "Nhap mau so thu 2:" << endl;
+	cin >> d;
+	cout << endl;
+	menu();
+	cout << endl << "Vui long nhap lua chon:";
+	cin >> luaChon;
+	do{
+			if(luaChon == 1){
+				phepCong(a,b,c,d);
+				cout <<endl;
+				menu();
+				cout << endl << "Vui long nhap lua chon:";
+				cin >> luaChon;
+			}
+			if(luaChon == 2){
+				    phepTru(a,b,c,d);
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+			}
+			if(luaChon == 3){
+					phepNhan(a,b,c,d);
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+			}
+			if(luaChon== 4){		
+					phepChia(a,b,c,d);
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+		   }
+		    if(luaChon >=5){
+		   	return 0;
+		   }	
+	}while(luaChon != 1 || luaChon != 2 || luaChon != 3 || luaChon !=4);
+}
